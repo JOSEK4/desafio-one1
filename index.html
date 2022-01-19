@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptado</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="titulo">código secreto</h1>
+
+  <main class="main">
+    <section class="form box">
+      <form onSubmit ="return false " >
+        <h2 label for="input-texto">Solo letras minúsculas, sin acento:</h2>
+        <input class="text-input" type="text" name="input-texto" id="input-texto" onchange="this.value=this.value.toLowerCase();" placeholder="Ingrese el texto aqui">
+        <input class="btn" type="submit" onclick="botonEncriptar()"  value="encriptar!" id="btn-encriptar">
+        <input class="btn" type="submit" onclick="botonDesencriptar()" value="desencriptar!" id="btn-desencriptar">
+      </form>
+    </section>
+  
+    <section class="msg box">
+      <h2 id="">Mensaje encriptada:</h2>
+      <input class="text-input" type="text" id="msg"></input>
+      <input class="btn" type="submit"  onclick="botonCopiar()" value="copiar" id="btn-copy">
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+<div id ="footer">
+  <p><h6>Copyright (c) 2022  Jose Ortiz Rondon All rights reseved</h6></P>
+  </div>
+            
+</html>
